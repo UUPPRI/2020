@@ -1,9 +1,5 @@
 #!/bin/bash
-# REV06: Sun 25 Jul 2021 06:13:30 WIB
-# REV05: Wed 02 Jun 2021 09:07:44 WIB
-# REV04: Sat Oct 31 21:08:36 WIB 2020
-# REV03: Thu Oct 22 08:56:05 WIB 2020
-# REV02: Fri Feb  1 14:14:42 WIB 2019
+# REV02: Sun 25 Jul 2021 20:20:00 WIB
 # START: Tue Dec 25 10:54:23 WIB 2018
 
 # Copyright (C) 2018-2020 Rahmat M. Samik-Ibrahim http://RahmatM.Samik-Ibrahim.vLSM.org/
@@ -11,10 +7,11 @@
 # that it will be useful, but WITHOUT ANY WARRANTY; without even the implied 
 # warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+YEAR="2020"
 
 function mkidx {
     cd $1
-    printf -- '---\nlayout: "layout"\n---\n# 2020\n'      >  index.md
+    printf -- '---\nlayout: "layout"\n---\n# %s\n' $YEAR  >  index.md
     for II in $(ls) ; do
         [ "$II" == "index.md" ] && continue
         [ -f $II ] && echo "* [$II]($II)"       >> index.md
@@ -32,7 +29,7 @@ layout: "layout"
 ---
 
 <br>
-# 2020
+# $YEAR
 \`\`\`
 EOF
 ls -R >> ${README}.md
@@ -42,12 +39,27 @@ EOF
 
 
 for II in \
-    ${README}.md \
+    ${README}.md  \
+    45UUD         \
     IDX           \
+    INPRES        \
+    KEPMEN        \
+    KEPMENKO      \
+    KEPSESMENKO   \
     KEPPRES       \
+    MK            \
+    MPR           \
     PERPRES       \
+    PERDA         \
+    PERKA         \
+    PERMEN        \
+    PERMENKO      \
+    PERPU         \
+    PNPS          \
     PP            \
+    SKB           \
     UI            \
+    UU            \
 ; do
     [ -d $II ] && mkidx $II
 done
