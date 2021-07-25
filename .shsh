@@ -1,4 +1,5 @@
 #!/bin/bash
+# REV06: Sun 25 Jul 2021 06:13:30 WIB
 # REV05: Wed 02 Jun 2021 09:07:44 WIB
 # REV04: Sat Oct 31 21:08:36 WIB 2020
 # REV03: Thu Oct 22 08:56:05 WIB 2020
@@ -13,7 +14,7 @@
 
 function mkidx {
     cd $1
-    printf -- '---\nlayout: "urls"\n---\n'      >  index.md
+    printf -- '---\nlayout: "layout"\n---\n# 2020\n'      >  index.md
     for II in $(ls) ; do
         [ "$II" == "index.md" ] && continue
         [ -f $II ] && echo "* [$II]($II)"       >> index.md
@@ -25,14 +26,28 @@ function mkidx {
 }
 
 README="00-README-ls-alR"
-ls -R > ${README}.txt
+cat > ${README}.md << EOF
+---
+layout: "layout"
+---
+
+<br>
+# 2020
+\`\`\`
+EOF
+ls -R >> ${README}.md
+cat   >> ${README}.md << EOF
+\`\`\`
+EOF
+
 
 for II in \
-    ${README}.txt \
+    ${README}.md \
     IDX           \
     KEPPRES       \
     PERPRES       \
     PP            \
+    UI            \
 ; do
     [ -d $II ] && mkidx $II
 done
