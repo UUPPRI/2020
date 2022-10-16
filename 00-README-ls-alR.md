@@ -10,6 +10,7 @@ layout: "layout"
 45UUD
 about.md
 assets
+BI
 _config.yml
 favicon.ico
 Gemfile
@@ -60,6 +61,9 @@ default.jpg
 
 ./assets/scripts:
 includeScript.py
+
+./BI:
+index.md
 
 ./IDX:
 index.md
@@ -300,6 +304,7 @@ PP-2020-025-Penyelenggaraan-Tabungan-Perumahan-Rakyat.pdf
 45UUD
 ABOUT
 assets
+BI
 favicon.ico
 IDX
 index.html
@@ -346,6 +351,9 @@ default.jpg
 
 ./_site/assets/scripts:
 includeScript.py
+
+./_site/BI:
+index.html
 
 ./_site/IDX:
 index.html
