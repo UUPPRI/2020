@@ -298,6 +298,7 @@ index.md
 ./PP:
 index.md
 PP-2020-025-Penyelenggaraan-Tabungan-Perumahan-Rakyat.pdf
+PP-2020-027-PENGELOLAAN-SAMPAH-SPESIFIK.pdf
 
 ./_site:
 00-README-ls-alR.html
