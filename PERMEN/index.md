@@ -4,7 +4,6 @@ layout: "layout"
 # 2020
 * [AGAMA](AGAMA/)
 * [DAG](DAG/)
-* [DAGRI](DAGRI/)
 * [DIKBUD](DIKBUD/)
 * [ESDM](ESDM/)
 * [HAN](HAN/)
